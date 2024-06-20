@@ -1,5 +1,5 @@
 #!/bin/bash
-
+hostname=$(hostname)
 # Počet dní, před kterými má proběhnout kontrola default: 20
 dias_antes=20
 
@@ -9,7 +9,7 @@ name=$(hostname)
 certbot_output=$(sudo certbot certificates 2>/dev/null)
 
 function print_certificate_info() {
-curl -d "Blíží se expirace certifikátu domény: ${2}, k expiraci dojde za: ${1} dní on server Wazuh-Nethost"  -u server:tFgiwAisLpaU3Cf6shM2YoEAzguP7p4X https://ntfy.Wazuh-Nethost/servery
+curl -d "Blíží se expirace certifikátu domény: ${2}, k expiraci dojde za: ${1} dní on server $hostname"  [ntfy link]
 } 
 
 #kontrola expirace certifikátů
